@@ -416,3 +416,20 @@ mode "$mode_gaps_outer" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
+
+#CUSTOM STUFF
+
+# Open custom programs
+bindsym $mod+Shift+z exec dolphin
+bindsym $mod+Shift+x exec firefox
+
+# Force workspaces
+for_window [class="firefox"] move to workspace $ws1
+for_window [class="discord"] move to workspace $ws2
+for_window [class="Spotify"] move to workspace $ws3
+
+
+# Open programs on login
+exec firefox
+exec discord
+exec spotify
